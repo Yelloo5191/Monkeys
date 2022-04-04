@@ -1,0 +1,14 @@
+Infinite amount of monekys given infinite amount of time will eventually run Shakespeare.
+
+27 different possibilities, one letter or one space.
+
+Choose one possibility, if word is written, send alert and document word.
+
+If word is in Shakespeare, super alert.
+
+Brainstorm:
+
+    Implement multi-threading ( for multiple monkeys at same time )
+    Implement api use for shakespeare works
+    Create cross reference function
+    

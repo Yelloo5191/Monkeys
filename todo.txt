@@ -12,3 +12,4 @@ Brainstorm:
     Implement api use for shakespeare works
     Create cross reference function
     
+Come up with way to use d.check for large strig that contains word

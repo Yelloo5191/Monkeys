@@ -4,6 +4,7 @@
 # Modules
 import sys, random
 import enchant # for dictionary
+from enchant.tokenize import get_tokenizer
 
 possibilities = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", ",", "."]
 
@@ -21,7 +22,8 @@ def loop(condition: bool) -> None:
     while condition:
         queue += random.choice(possibilities)
         if count > 100:
-            print("Word found: ", check(queue))
+            if check(queue):
+                print("Word found: ", check(queue))
             queue = ""
             count = 0
         count += 1
@@ -29,18 +31,14 @@ def loop(condition: bool) -> None:
 
 def check(string: str) -> str:
     # check for word in string
-    d = enchant.Dict("en_US")
-    for x in range(len(string)):
-        count = len(string)
-        print(x)
-        print(count)
-        while count > 0:
-            print(string[x:count])
-            if d.check(string[x:count]):
-                return string[x:count]
-            else:
-                count -= 1
-    return "No word found"
+    tknzr = get_tokenizer("en_US")
+
+    words_found = [x for x in tknzr(string) if enchant.request_pwl_dict("wordlist.txt").check(x[0])]
+    
+    if not words_found:
+        return False
+    else:
+        return words_found
 
 if __name__ == "__main__":
     __main__()

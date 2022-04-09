@@ -1,1 +1,1 @@
-An infinite amount of monekys given infinite amount of time will eventually run Shakespeare.
+An infinite amount of mokneys given infinite amount of time will eventually write Shakespeare.

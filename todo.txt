@@ -8,8 +8,8 @@ If word is in Shakespeare, super alert.
 
 Brainstorm:
 
-    Implement multi-threading ( for multiple monkeys at same time )
-    Implement api use for shakespeare works
-    Create cross reference function
+    Implement multi-threading ( for multiple monkeys at same time ) (later)
+    Implement api use for shakespeare works (later)
+    Create cross reference function [x]
     
 Come up with way to use d.check for large strig that contains word

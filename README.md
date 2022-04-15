@@ -1,1 +1,1 @@
-An infinite amount of mokneys given infinite amount of time will eventually write Shakespeare.
+An infinite amount of monkeys given infinite amount of time will eventually write Shakespeare.
